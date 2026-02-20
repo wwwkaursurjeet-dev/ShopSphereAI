@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import HeroBanner from "../components/HeroBanner";
 import "./Home.css";
-import { products } from "../data/products";
+import { products } from "../data/products.js";
 import Categories from "../components/Categories";
 
 function Home() {
