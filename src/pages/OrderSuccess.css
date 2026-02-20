@@ -1,0 +1,111 @@
+.order-wrapper {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f3f4f6;
+  padding: 20px;
+}
+
+.order-card {
+  background: white;
+  width: 100%;
+  max-width: 600px;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.success-title {
+  color: #16a34a;
+  margin-bottom: 20px;
+}
+
+.order-info {
+  background: #f9fafb;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  font-size: 14px;
+}
+
+.items-title {
+  margin-bottom: 15px;
+}
+
+.items-container {
+  margin-bottom: 20px;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+.total-box {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #111827;
+}
+
+.order-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #111827;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.order-btn:hover {
+  background: #374151;
+}
+/* Tracking Section */
+
+.tracking-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  position: relative;
+}
+
+.tracking-step {
+  text-align: center;
+  flex: 1;
+  position: relative;
+}
+
+.tracking-step .circle {
+  width: 18px;
+  height: 18px;
+  background: #d1d5db;
+  border-radius: 50%;
+  margin: 0 auto 8px;
+  transition: 0.3s;
+}
+
+.tracking-step p {
+  font-size: 12px;
+}
+
+.tracking-step.active .circle {
+  background: #16a34a;
+}
+
+.tracking-container::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #e5e7eb;
+  z-index: -1;
+}

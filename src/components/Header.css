@@ -1,0 +1,58 @@
+/* Header container */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #111827; /* dark header */
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo styling */
+.header .logo {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #22c55e; /* green highlight */
+}
+
+/* Remove default link styles for logo */
+.header .logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+/* Each nav link */
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+/* Hover effect */
+.nav-links a:hover {
+  color: #22c55e; /* highlight on hover */
+}
+
+/* Responsive: collapse nav on small screens (optional) */
+@media (max-width: 600px) {
+  .nav-links {
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .header {
+    padding: 10px 15px;
+  }
+}
+

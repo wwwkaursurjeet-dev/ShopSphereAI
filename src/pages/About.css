@@ -1,0 +1,25 @@
+.about-page {
+  min-height: 80vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 40px;
+  color: white;
+  text-align: center;
+}
+
+.about-content {
+  max-width: 700px;
+}
+
+.about-content h1 {
+  margin-bottom: 30px;
+  font-size: 40px;
+}
+
+.about-content p {
+  margin-bottom: 20px;
+  color: #cbd5e1;
+  line-height: 1.7;
+}

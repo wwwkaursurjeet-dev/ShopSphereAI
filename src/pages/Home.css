@@ -1,0 +1,290 @@
+.scroll-section {
+  padding: 40px;
+}
+
+.scroll-section h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.scroll-container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.scroll-track {
+  display: flex;
+  gap: 20px;
+  /* animate full width of first set */
+  animation: scroll-left 40s linear infinite;
+}
+
+.scroll-container:hover .scroll-track {
+  animation-play-state: paused; /* pause on hover */
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* moves exactly one set width */
+  }
+}
+
+.scroll-card {
+  min-width: 220px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  background: white;
+  transition: transform 0.3s;
+}
+
+.scroll-card:hover {
+  transform: translateY(-5px);
+}
+
+.scroll-image {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.scroll-price {
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.scroll-btn {
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: #111827;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .scroll-card {
+    min-width: 160px;
+  }
+
+  .scroll-image {
+    height: 120px;
+  }
+}
+/* Image Zoom Effect */
+.image-wrapper {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.scroll-image {
+  transition: transform 0.4s ease;
+}
+
+.scroll-card:hover .scroll-image {
+  transform: scale(1.08);
+}
+/* Premium Card Hover Glow */
+.scroll-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scroll-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15),
+              0 0 15px rgba(0, 123, 255, 0.25);
+}
+/* Smooth Button Glow */
+.scroll-btn {
+  background: linear-gradient(135deg, #d4af37, #b8962e);
+  color: #111;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.scroll-btn:hover {
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.5);
+  transform: translateY(-3px);
+}
+
+.scroll-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 20px;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.scroll-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(212, 175, 55, 0.3); /* soft gold glow */
+}
+.image-wrapper {
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.scroll-image {
+  transition: transform 0.5s ease;
+}
+
+.scroll-card:hover .scroll-image {
+  transform: scale(1.08);
+}
+/* Smooth Fade In */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+}
+.luxury-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  padding: 100px 60px;
+  background: #f8f9fb; /* soft elegant light */
+  text-align: center;
+}
+
+.feature-card {
+  padding: 40px 30px;
+  border-radius: 18px;
+  background: white;
+  transition: all 0.4s ease;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.feature-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #d4af37, #b8962e);
+  border-radius: 10px;
+}
+
+.feature-card h3 {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  color: #111;
+}
+
+.feature-card p {
+  color: #666;
+  font-size: 15px;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+.luxury-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 80px;
+  background: #f8f9fb;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.luxury-banner-text {
+  flex: 1;
+}
+
+.luxury-banner-text h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.luxury-banner-text p {
+  color: #555;
+  margin-bottom: 25px;
+  max-width: 450px;
+}
+
+.luxury-btn {
+  background: linear-gradient(135deg, #d4af37, #b8962e);
+  color: #111;
+  border: none;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.luxury-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.4);
+}
+
+.luxury-banner-image {
+  flex: 1;
+}
+
+.luxury-banner-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+.cinematic-banner {
+  height: 70vh;
+  background-image: url("https://images.unsplash.com/photo-1491553895911-0055eca6402d");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cinematic-overlay {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px 60px;
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+}
+
+.cinematic-overlay h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+
+
